@@ -1,12 +1,14 @@
-// Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import {
+    getAuth
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import {
+    getFirestore
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-
-// Your Firebase Configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBpdYkAmjurlaBOlIkTwP5_NHvwUOv_qtU",
   authDomain: "valeris-1f712.firebaseapp.com",
@@ -17,12 +19,9 @@ const firebaseConfig = {
   measurementId: "G-0X9HGPJ9Q6"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Services
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Export them
 export { auth, db };
